@@ -1,0 +1,13 @@
+CREATE TABLE [star].[stations]
+(
+    station_id VARCHAR(50) PRIMARY KEY NONCLUSTERED NOT ENFORCED,
+    name VARCHAR(75) NOT NULL,
+    latitude FLOAT NOT NULL,
+    longitude FLOAT NOT NULL
+)
+WITH
+(
+    CLUSTERED COLUMNSTORE INDEX
+)
+
+GO;
